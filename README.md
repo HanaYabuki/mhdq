@@ -1,2 +1,2 @@
 # mhdq
-A Qing Dynasty style Chinese converter
+A Qing Dynasty style Chinese converter.
