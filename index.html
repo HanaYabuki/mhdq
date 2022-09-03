@@ -74,7 +74,7 @@
         }
 
         $.ajax('./examples.txt', (response) => {
-            const default_list = response.split('\r\n\r\n');
+            const default_list = response.split(/\r?\n\r?\n/);
             b_input.innerText = default_list[Math.floor(Math.random() * default_list.length)];
             hook();
         })
