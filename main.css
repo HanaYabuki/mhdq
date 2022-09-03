@@ -74,4 +74,12 @@ button:active {
     background-color: white;
 }
 
+ul {
+    margin-left: 3rem;
+}
+li {
+    margin: .4rem 0;
+    font-size: 0.8rem;
+}
+
 .footer {}
