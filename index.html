@@ -32,7 +32,7 @@
             <p>设置</p>
             <form action="" class="like-p" onkeyup="hook()">
                 <label>行宽
-                    <input type="number" value="8" id="settings-row">
+                    <input type="number" value="6" id="settings-row">
                 </label>
                 <br>
                 <label>段高
@@ -61,7 +61,7 @@
         }
         const hook = debounce(function () {
             const str = b_input.innerText;
-            b_output.innerText = str.split('\n\n')
+            b_output.innerText = str.split('\n\n\n')
                 .map(s => encode(s, parseInt(settings_row.value), parseInt(settings_col.value)))
                 .join('\n\n');
         });
@@ -72,6 +72,12 @@
             alert('复制成功');
             window.getSelection().removeAllRanges();
         }
+
+        $.ajax('./examples.txt', (response) => {
+            const default_list = response.split('\r\n\r\n');
+            b_input.innerText = default_list[Math.floor(Math.random() * default_list.length)];
+            hook();
+        })
     </script>
 </body>
 

@@ -30,3 +30,7 @@ function encode(str, width, height) {
 
     return renderer.join('\n');
 }
+
+function random_init() {
+    return 
+}
